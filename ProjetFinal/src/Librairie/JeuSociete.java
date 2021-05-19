@@ -5,7 +5,7 @@ public class JeuSociete extends Produit{
 	private String nom, theme, niveau;
 	private int nbJoueur;
 	
-	public JeuSociete(int code, double prix, String nom, int nbJoueur, String theme, String niveau) {
+	public JeuSociete(String code, double prix, String nom, int nbJoueur, String theme, String niveau) {
 		
 		super(code, prix);
 		this.nom = nom;
@@ -16,8 +16,9 @@ public class JeuSociete extends Produit{
 	
     public double calculerPrixVente() {
 		
-    	double PrixVente = super.getPrix() * 2;
-    	return PrixVente;
+    	return this.getPrix() * 2.0;
+    	
+    	
 	}
 
 	public String getNom() {

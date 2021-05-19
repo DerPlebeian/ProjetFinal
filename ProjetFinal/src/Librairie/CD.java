@@ -4,16 +4,18 @@ public class CD extends CDetDVD{
 
 	private int nbTitres;
 	
-	public CD(int code, int prix, int duree, String titre, String nom, int annee, int nbTitres) {
+	public CD(String code, int prix, int duree, String titre, String nom, int annee, int nbTitres) {
 		
 		super(code, prix, duree, titre, nom, annee);
 		this.nbTitres = nbTitres;
 	}
 
-	@Override
-	double calculerPrixVente() {
-		double prixVente = super.getPrix() * 1.5;
-		return prixVente;
+	
+	public double calculerPrixVente() {
+		
+		return this.getPrix() * 1.5;
+		
+		
 	}
 
 	public int getNbTitres() {

@@ -4,7 +4,7 @@ public class Magazine extends Document{
 
 	private String mois, categorie;
 
-	public Magazine(int code, int prix, int Quantity, String Description, String titre, int annee, String mois, String categorie) {
+	public Magazine(String code, int prix, int Quantity, String Description, String titre, int annee, String mois, String categorie) {
 		
 		super(code, prix, Quantity, Description, titre, annee);
 		this.mois = mois;
@@ -13,8 +13,9 @@ public class Magazine extends Document{
 	
 	public double calculerPrixVente() {
 		
-		double prixVente = super.getPrix() * 1.25;
-		return prixVente;
+		return this.getPrix() * 1.25;
+		
+		
 	}
 
 	public String getMois() {

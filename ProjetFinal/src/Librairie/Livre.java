@@ -4,7 +4,7 @@ public class Livre extends Document{
 
 	private String auteur, editeur;
 	
-	public Livre(int code, int prix, int quantity, String description, String titre, int annee, String auteur, String editeur) {
+	public Livre(String code, int prix, int quantity, String description, String titre, int annee, String auteur, String editeur) {
 		
 		super(code, prix, quantity, description, titre, annee);
 		this.auteur = auteur;
@@ -13,8 +13,9 @@ public class Livre extends Document{
 	
 	public double calculerPrixVente() {
 		
-		double prixVente = super.getPrix() * 1.75;
-		return prixVente;
+		return this.getPrix() * 1.75;
+		
+		
 	}
 
 	public String getAuteur() {

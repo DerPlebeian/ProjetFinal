@@ -2,12 +2,12 @@ package Librairie;
 
 	public abstract class Produit {
 
-	    private int code;
+	    private String code;
 	    private double prix;
 	    private int quantity;
 	    private String description;
 
-	    public Produit(int code, double prix) {
+	    public Produit(String code, double prix) {
 	        
 	    	this.code = code;
 	        this.prix = prix;
@@ -17,22 +17,22 @@ package Librairie;
 	    
 	    abstract double calculerPrixVente();
 
-	    public void augmenterQuantiter() {
+	    public void augmenterQuantiter(int quantitee) {
 	    	
-	    	quantity++;
+	    	quantity += quantitee;
 	    }
 	    
-        public void diminuerQuantiter() {
+        public void diminuerQuantiter(int quantitee) {
 	    	
-	    	quantity--;
+	    	quantity -= quantitee;
 	    }
 	    
-	    public int getCode() {
+	    public String getCode() {
 	        return code;
 	    }
 
 
-	    public void setCode(int code) {
+	    public void setCode(String code) {
 	        this.code = code;
 	    }
 

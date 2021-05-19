@@ -5,7 +5,7 @@ public abstract class CDetDVD extends Produit{
 	private int duree, annee;
 	private String titre, nom;
 	
-	public CDetDVD(int code, int prix, int duree, String titre, String nom, int annee){
+	public CDetDVD(String code, int prix, int duree, String titre, String nom, int annee){
 		
 		super(code,prix);
 		this.duree = duree;
