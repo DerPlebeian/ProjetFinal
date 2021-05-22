@@ -14,8 +14,6 @@ public class Livre extends Document{
 	public double calculerPrixVente() {
 		
 		return this.getPrix() * 1.75;
-		
-		
 	}
 
 	public String getAuteur() {

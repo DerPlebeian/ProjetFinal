@@ -17,14 +17,14 @@ package Librairie;
 	    
 	    abstract double calculerPrixVente();
 
-	    public void augmenterQuantiter(int quantitee) {
+	    public void augmenterQuantiter(int quantity) {
 	    	
-	    	quantity += quantitee;
+	    	this.quantity += quantity;
 	    }
 	    
-        public void diminuerQuantiter(int quantitee) {
+        public void diminuerQuantiter(int quantity) {
 	    	
-	    	quantity -= quantitee;
+	    	this.quantity -= quantity;
 	    }
 	    
 	    public String getCode() {

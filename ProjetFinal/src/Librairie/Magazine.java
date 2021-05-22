@@ -2,11 +2,12 @@ package Librairie;
 
 public class Magazine extends Document{
 
-	private String mois, categorie;
+	private String categorie;
+	private int mois;
 
-	public Magazine(String code, int prix, int Quantity, String Description, String titre, int annee, String mois, String categorie) {
+	public Magazine(String code, int prix, int quantity, String description, String titre, int mois, int annee, String categorie) {
 		
-		super(code, prix, Quantity, Description, titre, annee);
+		super(code, prix, quantity, description, titre, annee);
 		this.mois = mois;
 		this.categorie = categorie;
 	}
@@ -18,11 +19,11 @@ public class Magazine extends Document{
 		
 	}
 
-	public String getMois() {
+	public int getMois() {
 		return mois;
 	}
 
-	public void setMois(String mois) {
+	public void setMois(int mois) {
 		this.mois = mois;
 	}
 
