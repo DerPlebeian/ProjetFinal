@@ -10,5 +10,4 @@ public class Bilan {
 		fichierSortie.newLine();
 		fichierSortie.close();
 	}
-
 }

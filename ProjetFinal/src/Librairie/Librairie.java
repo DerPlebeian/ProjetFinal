@@ -9,10 +9,10 @@ public class Librairie {
 	private static Produit[] listeStock;
 	private static int nb;
 	
-	public Librairie(String nom) {
+	public Librairie(String nom, double solde) {
 		
 		this.nom = nom;
-		solde = 0;
+		this.solde = solde;
 		listeStock = new Produit[MAX];
 		nb = 0;
 	}
@@ -82,31 +82,45 @@ public class Librairie {
 			
 	}
 	
-	public double acheterProduit(int quantite, String code) throws IOException {
+	public boolean acheterProduit(int quantite, String code) throws IOException {
 		
 		Produit produit = rechercherProduit(code);
 		double prixTotal = 0.0;
+		double prix = 0.0;
 		
 		if(produit != null) {
 		produit.augmenterQuantiter(quantite);
-		prixTotal = produit.getPrix();
+		prix = produit.getPrix();
 		}
 		
-		return prixTotal * quantite;
+		prixTotal = prix * quantite;
 		
+		if(solde < prixTotal)
+			return false;
+		else {
+			solde -= prixTotal;
+			Bilan.ecrireBilan("Achat", code, quantite);
+			return true;
+		} 
 	}
 	
-	public double vendreProduit(int quantite, String code) {
+	public boolean vendreProduit(int quantite, String code) throws IOException {
 		
        Produit produit = rechercherProduit(code);
+       double prix = 0.0;
        double prixTotal = 0.0;
 		
 		if(produit != null) {
 		produit.diminuerQuantiter(quantite);
-		prixTotal = produit.calculerPrixVente();
+		prix = produit.calculerPrixVente();
 		}
 		
-		return prixTotal * quantite;
+		prixTotal = prix * quantite;
+		
+		solde += prixTotal;
+		Bilan.ecrireBilan("Vente", code, quantite);
+		
+		return true;
 	}
 		
 	

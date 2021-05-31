@@ -14,8 +14,6 @@ public class CD extends CDetDVD{
 	public double calculerPrixVente() {
 		
 		return this.getPrix() * 1.5;
-		
-		
 	}
 
 	public int getNbTitres() {

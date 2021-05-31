@@ -4,9 +4,9 @@ public class Livre extends Document{
 
 	private String auteur, editeur;
 	
-	public Livre(String code, int prix, int quantity, String description, String titre, int annee, String auteur, String editeur) {
+	public Livre(String code, int prix, int quantity, String titre, String auteur, int annee, String editeur) {
 		
-		super(code, prix, quantity, description, titre, annee);
+		super(code, prix, quantity, titre, annee);
 		this.auteur = auteur;
 		this.editeur = editeur;
 	}

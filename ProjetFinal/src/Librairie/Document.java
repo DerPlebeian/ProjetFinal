@@ -5,7 +5,7 @@ public abstract class Document extends Produit{
 	private String titre;
 	private int annee;
 	
-    public Document(String code, int prix, int quantity, String description, String titre, int annee){
+    public Document(String code, int prix, int quantity, String titre, int annee){
   	  
 		super(code,prix);
 		this.titre = titre;

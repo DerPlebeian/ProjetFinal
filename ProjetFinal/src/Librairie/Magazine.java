@@ -5,9 +5,9 @@ public class Magazine extends Document{
 	private String categorie;
 	private int mois;
 
-	public Magazine(String code, int prix, int quantity, String description, String titre, int mois, int annee, String categorie) {
+	public Magazine(String code, int prix, int quantity, String titre, int mois, int annee, String categorie) {
 		
-		super(code, prix, quantity, description, titre, annee);
+		super(code, prix, quantity, titre, annee);
 		this.mois = mois;
 		this.categorie = categorie;
 	}

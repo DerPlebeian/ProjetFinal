@@ -7,13 +7,28 @@ public class Main {
 	public static void main(String[] args) {
 
 		Librairie l1;
+		String nom;
+		double solde;
+		
+		Scanner saisie = new Scanner(System.in);
+		
+		System.out.print("Quel est le nom de la librairie?");
+		nom = saisie.nextLine();
+		System.out.print("Quel est le solde?");
+		solde = saisie.nextDouble();
+		saisie.nextLine();
+		
+		l1 = new Librairie(nom, solde);
+		
+		saisie.close();
+		
 		
 		menu();
 	}
 	
 	static void menu() {
 		
-		System.out.print("Bienvenue à la librairie!"
+		System.out.print("Bienvenue à la librairie " + "!"
 				+ "\n 1. Saisir les produits par fichier"
 				+ "\n 2. Ajouter des nouveaux produits"
 				+ "\n 3. Retirer des produits discontinués"
