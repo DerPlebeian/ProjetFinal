@@ -6,6 +6,8 @@ public class Main {
 
 	public static void main(String[] args) {
 
+		Librairie l1;
+		
 		menu();
 	}
 	
@@ -58,7 +60,7 @@ public class Main {
 					else{
 						if(reponse == 5)
 							choix5();
-						else
+						else {
 							if(reponse == 6)
 								choix6();
 							else {
@@ -69,7 +71,8 @@ public class Main {
 										choix8();
 								}
 							}
-					}
+					    }	
+				    }
 				}
 			}
 		}
@@ -101,6 +104,6 @@ public class Main {
 	static void choix8() {
 		
 		System.out.println("--------------------------------------------------------"
-				+ "\n Bonne journée");
+				+ "\n Bonne journée!");
 	}
 }

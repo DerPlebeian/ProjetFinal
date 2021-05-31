@@ -1,5 +1,6 @@
 package Librairie;
 
+import java.io.*;
 public class Librairie {
 
 	private static final int MAX = 500;
@@ -8,10 +9,10 @@ public class Librairie {
 	private static Produit[] listeStock;
 	private static int nb;
 	
-	public Librairie(String nom, double solde) {
+	public Librairie(String nom) {
 		
 		this.nom = nom;
-		this.solde = solde;
+		solde = 0;
 		listeStock = new Produit[MAX];
 		nb = 0;
 	}
@@ -81,7 +82,7 @@ public class Librairie {
 			
 	}
 	
-	public double acheterProduit(int quantite, String code) {
+	public double acheterProduit(int quantite, String code) throws IOException {
 		
 		Produit produit = rechercherProduit(code);
 		double prixTotal = 0.0;
