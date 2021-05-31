@@ -11,6 +11,7 @@ public class Livre extends Document{
 		this.editeur = editeur;
 	}
 	
+	// Calcule le prix de vente des livres
 	public double calculerPrixVente() {
 		
 		return this.getPrix() * 1.75;

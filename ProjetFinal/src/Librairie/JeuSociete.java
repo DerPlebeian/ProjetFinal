@@ -3,18 +3,33 @@ package Librairie;
 public class JeuSociete extends Produit{
 	
 	private String nom, theme, niveau;
-	private int nbJoueur;
+	private int nbJoueur, quantity;
 	
-	public JeuSociete(String code, double prix, String nom, int nbJoueur, String theme, String niveau) {
+	public JeuSociete(String code, double prix, int quantity, String nom, int nbJoueur, String theme, String niveau) {
 		
 		super(code, prix);
+		this.quantity = quantity;
 		this.nom = nom;
 		this.nbJoueur = nbJoueur;
 		this.theme = theme;
 		this.niveau = niveau;
 	}
 	
-    public double calculerPrixVente() {
+	
+	
+    public int getQuantity() {
+		return quantity;
+	}
+
+
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+
+
+    // Calcule le prix de vente des Jeux de sociétés
+	public double calculerPrixVente() {
 		
     	return this.getPrix() * 2.0;
     	

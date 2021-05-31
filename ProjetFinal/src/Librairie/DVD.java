@@ -2,10 +2,12 @@ package Librairie;
 
 public class DVD extends CDetDVD{
 	
-	public DVD(String code, int prix, int duree, String titre, String nom, int annee) {
-		super(code, prix, duree, titre, nom, annee);
+	public DVD(String code, int prix, int quantity, int duree, String titre, String nom, int annee) {
+		super(code, prix, quantity, duree, titre, nom, annee);
 	}
 
+	
+	// Calcule le prix de vente des DVDs
 	@Override
 	public double calculerPrixVente() {
 		

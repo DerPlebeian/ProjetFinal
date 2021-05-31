@@ -12,11 +12,10 @@ public class Magazine extends Document{
 		this.categorie = categorie;
 	}
 	
+	// Calcule le prix de vente des magazines
 	public double calculerPrixVente() {
 		
 		return this.getPrix() * 1.25;
-		
-		
 	}
 
 	public int getMois() {

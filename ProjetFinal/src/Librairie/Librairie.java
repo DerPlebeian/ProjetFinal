@@ -59,6 +59,7 @@ public class Librairie {
 		return nb;
 	}
 
+	// Méthode qui ajoute un produit dans le tableau "listeStock" et qui augmente le nombre de produit dans le tableau
 	public void ajouterProduit(Produit p) {
 		
 		if(nb < MAX) {
@@ -68,6 +69,7 @@ public class Librairie {
 		}
 	}
 	
+	// Méthode qui retire un produit dans le tableau "listeStock" et qui diminue le nombre de produit dans le tableau
 	public void retirerProduit(String code) {
 		
 		if(nb > 0) 
@@ -82,6 +84,9 @@ public class Librairie {
 			
 	}
 	
+	/* Méthode qui cherche si le produit existe réellement. S'il existe, il diminue le solde de la librairie et écrit dans
+	  le bilan que l'achat s'est bien réalisé */
+	 
 	public boolean acheterProduit(int quantite, String code) throws IOException {
 		
 		Produit produit = rechercherProduit(code);
@@ -104,6 +109,8 @@ public class Librairie {
 		} 
 	}
 	
+	/* Méthode qui cherche si le produit existe réellement. S'il existe, il augmente le solde de la librairie et écrit dans
+	  le bilan que la vente s'est bien réalisé */
 	public boolean vendreProduit(int quantite, String code) throws IOException {
 		
        Produit produit = rechercherProduit(code);
@@ -123,7 +130,7 @@ public class Librairie {
 		return true;
 	}
 		
-	
+	// Méthode qui cherche un produit à partir de son code
 	public Produit rechercherProduit(String code) {
 		
 		Produit produit = null;

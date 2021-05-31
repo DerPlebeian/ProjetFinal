@@ -2,18 +2,26 @@ package Librairie;
 
 public abstract class CDetDVD extends Produit{
 
-	private int duree, annee;
+	private int duree, annee, quantity;
 	private String titre, nom;
 	
-	public CDetDVD(String code, int prix, int duree, String titre, String nom, int annee){
+	public CDetDVD(String code, int prix, int quantity, int duree, String titre, String nom, int annee){
 		
 		super(code,prix);
+		this.quantity = quantity;
 		this.duree = duree;
 		this.titre = titre;
 		this.nom = nom;
 		this.annee = annee;
     }
 	
+	public int getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
 
 	public int getDuree() {
 		return duree;

@@ -15,13 +15,16 @@ package Librairie;
 	        quantity = 0;
 	    }
 	    
+	    // Méthode abstraite qui calcule le prix de vente des classes enfants de la classe Produit
 	    abstract double calculerPrixVente();
 
+	    // Augmente la quantité du produit
 	    public void augmenterQuantiter(int quantity) {
 	    	
 	    	this.quantity += quantity;
 	    }
 	    
+	    // Diminue la quantité du produit
         public void diminuerQuantiter(int quantity) {
 	    	
 	    	this.quantity -= quantity;
