@@ -5,7 +5,7 @@ public class JeuSociete extends Produit{
 	private String nom, theme, niveau;
 	private int nbJoueur, quantity;
 	
-	public JeuSociete(String code, double prix, int quantity, String nom, int nbJoueur, String theme, String niveau) {
+	public JeuSociete(String code, int prix, int quantity, String nom, int nbJoueur, String theme, String niveau) {
 		
 		super(code, prix);
 		this.quantity = quantity;
